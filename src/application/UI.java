@@ -8,6 +8,11 @@ import chess.ChessPosition;
 
 public class UI {
 	
+	public static void clearScreen() {
+		System.out.println("\033[H\033[2J");
+		System.out.flush();
+	}
+	
 	public static ChessPosition readChessPosition(Scanner scanner) {
 		try {
 			String s = scanner.nextLine();
