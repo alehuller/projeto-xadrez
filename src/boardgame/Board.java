@@ -1,14 +1,14 @@
 package boardgame;
 
-public class Tabuleiro {
+public class Board {
 	private int rows;
 	private int columns;
-	private Peca[][] pieces;
+	private Piece[][] pieces;
 	
-	public Tabuleiro(int rows, int columns) {
+	public Board(int rows, int columns) {
 		this.rows = rows;
 		this.columns = columns;
-		pieces = new Peca[rows][columns];
+		pieces = new Piece[rows][columns];
 	}
 
 	public int getColumns() {
@@ -26,7 +26,14 @@ public class Tabuleiro {
 	public void setRows(int rows) {
 		this.rows = rows;
 	}
-
+	
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
+	
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
 	
 	
 }

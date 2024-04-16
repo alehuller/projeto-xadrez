@@ -1,15 +1,15 @@
 package application;
 
 import boardgame.Position;
-import boardgame.Tabuleiro;
+import boardgame.Board;
+import chess.ChessMatch;
 
 public class Program {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		Tabuleiro board = new Tabuleiro(8, 8);
-		
+		ChessMatch chessMatch = new ChessMatch();
+		UI.printBoard(chessMatch.getPieces());
 	}
 
 }
